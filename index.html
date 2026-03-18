@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flight Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #map {
+      height: 500px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 6px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flights by Airport</h1>
+
+  <label for="airportCode">Airport Code:</label>
+  <input id="airportCode" value="MSN">
+  <button onclick="getFlights()">Load Flights</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Altitude</th>
+        <th>Registration</th>
+        <th>Direction</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+      </tr>
+    </thead>
+    <tbody id="table_body"></tbody>
+  </table>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
